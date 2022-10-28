@@ -1,0 +1,23 @@
+{
+  "name": "hng_task1",
+  "version": "1.0.0",
+  "description": "First tasks of the hng program",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Codestronomer/HngTaskOne.git"
+  },
+  "author": "John Rumide",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Codestronomer/HngTaskOne/issues"
+  },
+  "homepage": "https://github.com/Codestronomer/HngTaskOne#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
