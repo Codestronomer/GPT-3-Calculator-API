@@ -3,13 +3,11 @@ const express = require('express');
 const app = express();
 const port = 3000;
 
-const json = express.json()
-
-app.get("/", (req, res) => {
+app.get("", (req, res) => {
         res.send({
                 "slackUsername": "John Rumide",
                 "backend": true,
-                "integer": 21,
+                "age": 21,
                 "bio": "Hi, i'm John Rumide, A software developer"
         });
 });
