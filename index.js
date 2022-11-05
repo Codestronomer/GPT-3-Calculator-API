@@ -77,7 +77,7 @@ app.post("", (req, res) => {
                                 return response.data.choices[0].text.trim().replace('?', '');
 
                         } catch (err) {
-                                console.log("Whoops! AI couldn't answer")
+                                console.log(err);
                         }
                 }
 
