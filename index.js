@@ -36,26 +36,49 @@ app.post("", (req, res) => {
         if (x_int && y_int) {
 
                 if (operation.includes("addition")) {
-                        res.send({
-                                "slackUsername": "John Rumide",
-                                "result": (parseInt(x_int) + parseInt(y_int)),
-                                "operation_type": operation
-                        })
-                } else if (operation.includes("multiplication")) {
-                        res.send({
-                                "slackUsername": "John Rumide",
-                                "result": (parseInt(x_int) * parseInt(y_int)),
-                                "operation_type": operation
-                        })
-                } else {
                         try {
+                                const result = parseInt(x_int) + parseInt(y_int);
                                 res.send({
                                         "slackUsername": "John Rumide",
-                                        "result": (parseInt(x_int) / parseInt(y_int)),
+                                        "result": result,
+                                        "operation_type": operation
+                                })
+                        } catch (err) {
+                                console.log(err);
+                        }
+                } else if (operation.includes("multiplication")) {
+
+                        try {
+                                const result = parseInt(x_int) * parseInt(y_int)
+                                res.send({
+                                        "slackUsername": "John Rumide",
+                                        "result": result,
+                                        "operation_type": operation
+                                })
+                        } catch (err) {
+                                console.log(err);
+                        }
+                } else if (operation.includes("subtraction")) {
+                        try {
+                                const result = (parseInt(x_int) - parseInt(y_int));
+                                res.send({
+                                        "slackUsername": "John Rumide",
+                                        "result": result,
                                         "operation_type": operation
                                 })
                         } catch (error) {
-                                res.send("Zero Division error")
+                                console.log(error);
+                        }
+                } else {
+                        try {
+                                const result = parseInt(x_int) / parseInt(y_int);
+                                res.send({
+                                        "slackUsername": "John Rumide",
+                                        "result": result,
+                                        "operation_type": operation
+                                })
+                        } catch (error) {
+                                console.log(error);
                         }
                 }
         } else {
