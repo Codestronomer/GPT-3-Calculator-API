@@ -1,23 +1,23 @@
 const express = require("express");
 const cors = require("cors");
 const { Configuration, OpenAIApi } = require("openai")
-const axios = require('axios');
 
-// OpenAi Authentication configuration
-const configuration = new Configuration({
-        apiKey: process.env.OPENAI_API_KEY,
-});
-const openai = new OpenAIApi(configuration);
-
-
-const bodyParser = require('body-parser')
-
+// create express app
 const app = express();
 const port = process.env.PORT || 3000;
+
+const bodyParser = require('body-parser')
 
 app.use(cors({ origin: "*" }));
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
+
+// OpenAI Authentication configuration
+const configuration = new Configuration({
+        apiKey: process.env.OPENAI_API_KEY,
+});
+
+const openai = new OpenAIApi(configuration);
 
 app.get("", (req, res) => {
         res.send({
@@ -27,7 +27,6 @@ app.get("", (req, res) => {
                 "bio": "Hi, i'm John Rumide, A software developer"
         });
 });
-
 
 app.post("", (req, res) => {
         let operation = req.body.operation_type;
@@ -60,8 +59,7 @@ app.post("", (req, res) => {
                         }
                 }
         } else {
-
-                // Send a request with the operation to OpenAi
+                // Send a request with the operation to OpenAi and return Ai response
                 const askOpenAi = async (operation) => {
                         try {
 
@@ -81,7 +79,6 @@ app.post("", (req, res) => {
                         } catch (err) {
                                 console.log("Whoops! AI couldn't answer")
                         }
-
                 }
 
                 askOpenAi(operation).then((response) => {
@@ -93,7 +90,6 @@ app.post("", (req, res) => {
                         });
                 }
                 )
-
         }
 })
 
