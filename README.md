@@ -1,6 +1,6 @@
 # GPT-3 Calculator API
 > A simple endpoint based On the REST API architecture that performs basic arithmetic calculations.
-> Live demo [_here_](https://www.example.com). <!-- If you have the project hosted somewhere, include the link here. -->
+> Live demo [_here_](https://murmuring-castle-28179.herokuapp.com/). <!-- If you have the project hosted somewhere, include the link here. -->
 
 ## Table of Contents
 * [General Info](#general-information)
@@ -51,9 +51,11 @@ Set up your enviromental Variables
 - OPENAI_API_KEY - Generate one from OPENAI if you don't have on.
 
 ## Usage
-Test using CURL
-`curl https://murmuring-castle-28179.herokuapp.com/ -X POST -d '{"operation_type": "What is the addition of 5 and 8"}' -H "Content-Type: application/json"`
-Or Test Using Postman
+- Test using CURL
+```
+$ curl https://murmuring-castle-28179.herokuapp.com/ -X POST -d '{"operation_type": "What is the addition of 5 and 8"}' -H "Content-Type: application/json"
+```
+- Test Using Postman
 ![image](https://user-images.githubusercontent.com/56360107/201117273-6893f8c4-497c-476f-a0d4-1a6ee22742dc.png)
 
 
