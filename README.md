@@ -33,7 +33,7 @@
 
 
 ## Screenshots
-![image](https://user-images.githubusercontent.com/56360107/201117329-4fecc510-ebc7-4985-bda4-6ea09dbb29be.png)
+![image](https://user-images.githubusercontent.com/56360107/201122220-015ad14d-3a02-4006-9668-af9d6d29f39a.png)
 <!-- If you have screenshots you'd like to share, include them here. -->
 
 
@@ -56,7 +56,8 @@ Set up your enviromental Variables
 $ curl https://murmuring-castle-28179.herokuapp.com/ -X POST -d '{"operation_type": "What is the addition of 5 and 8"}' -H "Content-Type: application/json"
 ```
 - Test Using Postman
-![image](https://user-images.githubusercontent.com/56360107/201117273-6893f8c4-497c-476f-a0d4-1a6ee22742dc.png)
+
+![image](https://user-images.githubusercontent.com/56360107/201122268-51a16643-7554-4b10-b973-2f451ad58864.png)
 
 
 ## Project Status
