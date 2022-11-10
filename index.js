@@ -20,12 +20,8 @@ const configuration = new Configuration({
 const openai = new OpenAIApi(configuration);
 
 app.get("", (req, res) => {
-        res.send({
-                "slackUsername": "John Rumide",
-                "backend": true,
-                "age": 21,
-                "bio": "Hi, i'm John Rumide, A software developer"
-        });
+        res.send("Hello, I'm marv, An AI calculator.");
+	res.send("Send a POST request with your question in the operation_type parameter!")
 });
 
 app.post("", (req, res) => {
@@ -34,12 +30,10 @@ app.post("", (req, res) => {
         let y_int = req.body.y;
 
         if (x_int && y_int) {
-
                 if (operation.includes("addition")) {
                         try {
                                 const result = parseInt(x_int) + parseInt(y_int);
                                 res.send({
-                                        "slackUsername": "John Rumide",
                                         "result": result,
                                         "operation_type": operation
                                 })
@@ -85,7 +79,6 @@ app.post("", (req, res) => {
                 // Send a request with the operation to OpenAi and return Ai response
                 const askOpenAi = async (operation) => {
                         try {
-
                                 let response = await openai.createCompletion({
                                         model: "text-davinci-002",
                                         prompt: 'Input: Calculate this and reply with Just the resulting number, ' + operation,
@@ -103,7 +96,6 @@ app.post("", (req, res) => {
                                 console.log(err);
                         }
                 }
-
                 askOpenAi(operation).then((response) => {
                         const result = parseInt(response);
                         res.send({
@@ -111,8 +103,7 @@ app.post("", (req, res) => {
                                 "result": result,
                                 "operation_type": operation
                         });
-                }
-                )
+                })
         }
 })
 
