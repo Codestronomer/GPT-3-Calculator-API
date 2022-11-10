@@ -10,7 +10,6 @@
 * [Setup](#setup)
 * [Usage](#usage)
 * [Project Status](#project-status)
-* [Room for Improvement](#room-for-improvement)
 * [Acknowledgements](#acknowledgements)
 * [Contact](#contact)
 <!-- * [License](#license) -->
@@ -41,10 +40,11 @@
 ## Setup
 To continue, you need to have Node installed. You can download [here](https://nodejs.org/en/download/).
 To set up the server to run locally, Enter the following commands In your terminal:
-```$ git clone https://github.com/Codestronomer/GPT-3-Calculator-API/```
-```cd gtp-3-calculator-API/```
-```npm install```
-```npm start```
+```$ git clone https://github.com/Codestronomer/GPT-3-Calculator-API/
+   $ cd gtp-3-calculator-API/
+   $ npm install
+   $ npm start
+ ```
 
 Set up your enviromental Variables
 - PORT
