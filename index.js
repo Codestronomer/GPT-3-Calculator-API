@@ -56,7 +56,6 @@ app.post("", (req, res) => {
                         try {
                                 const result = (parseInt(x_int) - parseInt(y_int));
                                 res.send({
-                                        "slackUsername": "John Rumide",
                                         "result": result,
                                         "operation_type": operation
                                 })
@@ -99,7 +98,6 @@ app.post("", (req, res) => {
                 askOpenAi(operation).then((response) => {
                         const result = parseInt(response);
                         res.send({
-                                "slackUsername": "John Rumide",
                                 "result": result,
                                 "operation_type": operation
                         });
