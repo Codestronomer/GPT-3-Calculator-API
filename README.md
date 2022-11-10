@@ -68,7 +68,8 @@ Project is: _complete_ / _Still_under_active_developer_.
 
 
 ## Contact
-Created by John Rumide [@codestronomer](https://www.github.com/codestronomer/) - feel free to contact me!
+Created by John Rumide [@codestronomer](https://www.github.com/codestronomer/)
+Email: Johnrumide6@gmail.com - feel free to contact me!
 
 
 <!-- Optional -->
