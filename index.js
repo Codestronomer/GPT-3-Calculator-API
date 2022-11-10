@@ -20,8 +20,8 @@ const configuration = new Configuration({
 const openai = new OpenAIApi(configuration);
 
 app.get("", (req, res) => {
-        res.send("Hello, I'm marv, An AI calculator.");
-	res.send("Send a POST request with your question in the operation_type parameter!")
+        res.send(`Hello, I'm marv, An AI calculator.\n
+		Send a POST request with your question in the operation_type parameter!`)
 });
 
 app.post("", (req, res) => {
